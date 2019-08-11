@@ -52,7 +52,7 @@ client.on("message", async message => {
 
   if (comando === "snc") {
     var data;
-    fs.readFile('./meme.txt', 'utf8', function (err, rawData) {
+    fs.readFile('./snc.txt', 'utf8', function (err, rawData) {
       if (err) return console.log(err);
       data = rawData.split('\n');
       
