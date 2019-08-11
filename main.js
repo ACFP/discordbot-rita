@@ -91,9 +91,9 @@ client.on("message", async message => {
     }
   }
 
-  if (comando == "phypo") {
+  if (comando == "phypho") {
     var data;
-    fs.readFile('./phypo.txt', 'utf8', function (err, rawData) {
+    fs.readFile('./phypho.txt', 'utf8', function (err, rawData) {
       if (err) return console.log(err);
       data = rawData.split('\n');
       
