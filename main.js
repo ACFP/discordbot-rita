@@ -72,9 +72,9 @@ client.on("message", async message => {
     }
   }
 
-  if (comando === "ben") {
+  if (comando === "cursed") {
     var data;
-    fs.readFile('./ben.txt', 'utf8', function (err, rawData) {
+    fs.readFile('./cursed.txt', 'utf8', function (err, rawData) {
       if (err) return console.log(err);
       data = rawData.split('\n');
       
