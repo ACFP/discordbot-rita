@@ -50,6 +50,28 @@ client.on("message", async message => {
     }
   }
 
+  if (comando === "snc") {
+    var data;
+    fs.readFile('./meme.txt', 'utf8', function (err, rawData) {
+      if (err) return console.log(err);
+      data = rawData.split('\n');
+      
+      function randomInt(l, h) {
+        return Math.floor(Math.random() * (h - l) + l);
+      }
+
+      resultChange(data[randomInt(0, data.length)]);
+    });
+
+    async function resultChange(input) {
+      result = input
+      const embed = new Discord.RichEmbed()
+        .setColor('#0099ff')
+        .setImage(result)
+      return await message.channel.send(embed);
+    }
+  }
+
   if (comando === "ben") {
     var data;
     fs.readFile('./ben.txt', 'utf8', function (err, rawData) {
