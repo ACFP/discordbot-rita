@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
-const token = "NjEwMTAwMzIxOTA5MzQyMjA5.XVAxTQ.EwTfY3a1IcNjURQbwVARgwfLl2Y";//process.env.token;
+const token = process.env.token;
 const fs = require("fs");
 const readline = require("readline");
 
