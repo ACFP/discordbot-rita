@@ -75,7 +75,7 @@ client.on("message", async message => {
   if (comando === "triggered") {
     let _ = 'https://raw.githubusercontent.com/ReeCaptcha/discordbot-rita/master/triggerita.gif'
     const embed = new Discord.RichEmbed()
-      .setColor('#0099ff')
+      .setColor('#FF0000')
       .setImage(_)
     return await message.channel.send(embed);
   }
