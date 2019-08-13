@@ -74,7 +74,7 @@ client.on("message", async message => {
 
   if (comando === "triggered") {
     var data;
-    fs.readFile('./triggerita.gif', 'utf8', function (err, rawData) {
+    fs.readFile('./triggerita.txt', 'utf8', function (err, rawData) {
       if (err) return console.log(err);
       data = rawData.split('\n');
       
