@@ -72,6 +72,28 @@ client.on("message", async message => {
     }
   }
 
+  if (comando === "triggered") {
+    var data;
+    fs.readFile('./triggered.txt', 'utf8', function (err, rawData) {
+      if (err) return console.log(err);
+      data = rawData.split('\n');
+      
+      function randomInt(l, h) {
+        return Math.floor(Math.random() * (h - l) + l);
+      }
+
+      resultChange(data[randomInt(0, data.length)]);
+    });
+
+    async function resultChange(input) {
+      result = input
+      const embed = new Discord.RichEmbed()
+        .setColor('#0099ff')
+        .setImage(result)
+      return await message.channel.send(embed);
+    }
+  }
+
   if (comando === "cursed") {
     var data;
     fs.readFile('./cursed.txt', 'utf8', function (err, rawData) {
